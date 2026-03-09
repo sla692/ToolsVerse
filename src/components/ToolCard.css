@@ -1,0 +1,140 @@
+.tool-card {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  background: linear-gradient(135deg, rgba(45, 53, 97, 0.8), rgba(45, 53, 97, 0.3));
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+}
+
+.tool-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(0, 180, 212, 0.1));
+  opacity: 0;
+  transition: var(--transition);
+  z-index: 0;
+}
+
+.tool-card:hover::before {
+  opacity: 1;
+}
+
+.tool-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--color-accent);
+  box-shadow: 0 15px 30px rgba(0, 212, 255, 0.2);
+}
+
+.tool-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.tool-card-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  background: rgba(0, 212, 255, 0.1);
+  border-radius: 10px;
+  transition: var(--transition);
+}
+
+.tool-card:hover .tool-card-icon {
+  background: rgba(0, 212, 255, 0.2);
+  transform: scale(1.1);
+}
+
+.tool-card-title {
+  font-size: 1.3rem;
+  margin: 15px 0 10px;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.tool-card-description {
+  font-size: 0.95rem;
+  color: var(--color-text-dark);
+  margin-bottom: 15px;
+  flex-grow: 1;
+}
+
+.tool-card-category {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.category-badge {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.category-calculators {
+  background-color: rgba(0, 208, 255, 0.2);
+  color: #00d0ff;
+}
+
+.category-text {
+  background-color: rgba(0, 208, 136, 0.2);
+  color: #00d088;
+}
+
+.category-generators {
+  background-color: rgba(255, 215, 0, 0.2);
+  color: #ffd700;
+}
+
+.category-converters {
+  background-color: rgba(255, 107, 107, 0.2);
+  color: #ff6b6b;
+}
+
+.tool-card-arrow {
+  font-size: 1.5rem;
+  color: var(--color-accent);
+  transition: var(--transition);
+  align-self: flex-end;
+}
+
+.tool-card:hover .tool-card-arrow {
+  transform: translateX(5px);
+  color: var(--color-hover);
+}
+
+@media (max-width: 480px) {
+  .tool-card {
+    padding: 20px;
+  }
+  
+  .tool-card-icon {
+    font-size: 2.5rem;
+    height: 60px;
+  }
+  
+  .tool-card-title {
+    font-size: 1.1rem;
+  }
+  
+  .tool-card-description {
+    font-size: 0.9rem;
+  }
+}
