@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Fondo -->
+  <rect width="100" height="100" fill="#1a1f3a" rx="20"/>
+  
+  <!-- Tuerca azul -->
+  <g transform="translate(50, 50)">
+    <!-- Rueda hexagonal exterior -->
+    <polygon points="0,-35 30.3,-17.5 30.3,17.5 0,35 -30.3,17.5 -30.3,-17.5" 
+             fill="none" stroke="#00d4ff" stroke-width="3"/>
+    
+    <!-- Hexágono interior -->
+    <polygon points="0,-25 21.65,-12.5 21.65,12.5 0,25 -21.65,12.5 -21.65,-12.5" 
+             fill="none" stroke="#00d4ff" stroke-width="2"/>
+    
+    <!-- Círculo central -->
+    <circle cx="0" cy="0" r="8" fill="#00d4ff"/>
+    
+    <!-- Línea de eje -->
+    <line x1="-8" y1="0" x2="8" y2="0" stroke="#1a1f3a" stroke-width="2"/>
+  </g>
+</svg>
