@@ -1,0 +1,22 @@
+# ToolsVerse Robots.txt
+# Allow all crawlers
+
+User-agent: *
+Allow: /
+Disallow: 
+
+# Sitemap
+Sitemap: https://toolsverse.com/sitemap.xml
+
+# Specific rules for common bots
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
